@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tell A Story</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1>Tell A Story</h1>
+  <form method="POST" action="{{ url_for('generate_story') }}">
+    <label for="age">Age:</label>
+    <input type="number" name="age" id="age" required>
+    <br>
+    <label for="Protagonist_name">Protagonist Name:</label>
+    <input type="text" name="Protagonist_name" id="Protagonist_name" required>
+    <br>
+    <label for="villain_name">Villain Name:</label>
+    <input type="text" name="villain_name" id="villain_name" required>
+    <br><br>
+    <input type="submit" value="Generate Story">
+  </form>
+</body>
+</html>
